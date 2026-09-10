@@ -71,7 +71,12 @@ header.site-nav.scrolled{
 }
 .nav-links .navlink:hover{ color:var(--ink); }
 .nav-links .navlink.active{ color:var(--ink); border-bottom:1px solid var(--ink); padding-bottom:3px; }
-.menu-toggle{ display:none; color: var(--ink); }
+.menu-toggle{
+  display:none;
+  color: var(--ink);
+  position: relative;
+  z-index: 51;
+}
 
 .page{ display:none; }
 .page.active{ display:block; animation:fadein .45s ease; }
@@ -309,13 +314,6 @@ header.site-nav.scrolled{
 .event-link:hover { opacity: .6; }
 
 /* ===================== FOOTER FIX ===================== */
-
-footer.site-footer { 
-  background: var(--ink); 
-  padding: 50px 0 40px; 
-  margin-top: 0; /* Resets any previous margin */
-  border-top: 1px solid var(--ink); /* Ensures it's separated from content */
-}
 
 .foot-row {
     display: flex; 
@@ -737,27 +735,11 @@ footer.site-footer {
   transform: rotate(-8deg);
 }
 
-/* ===================== FOOTER ===================== */
-footer.site-footer { background: var(--ink); padding: 50px 0 40px; }
-.foot-row {
-    display: flex; justify-content: space-between; align-items: center;
-    margin-bottom: 24px;
-}
-.foot-logo { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 16px; letter-spacing: .1em; text-transform: uppercase;
-color: var(--hairline); }
-.foot-sub { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--hairline); }
-.foot-mid {
-    display: flex; justify-content: space-between; align-items: center;
-    font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--hairline);
-}
-.foot-mid a { margin: 0 10px; }
-.foot-mid a:hover { color: var(--hairline); }
-
-
-/* Ensure the page fills the viewport so footer doesn't create a white gap */
+/* ===== Fix the white gap at the bottom ===== */
 html, body {
-  min-height: 100%;
+  min-height: 100vh;
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -765,6 +747,16 @@ body {
   flex-direction: column;
 }
 
+.page.active,
 main.page.active {
-  flex: 1;
+  flex: 1 0 auto;
+}
+
+footer.site-footer {
+  flex-shrink: 0;
+  margin-top: auto;
+  background: var(--ink);
+  padding: 50px 0 40px;
+  padding-bottom: 40px;
+  border-top: 1px solid var(--ink);
 }

@@ -1,0 +1,351 @@
+/* ==========================================================
+   CHRISTINE'S ATELIER — RESPONSIVE OVERRIDES
+   Order: Split Screen → Tablet → Mobile → Small Phone
+   ========================================================== */
+
+/* ==========================================================
+   1. SPLIT SCREEN / SMALL LAPTOP (900px - 1200px)
+   ========================================================== */
+@media (max-width: 1200px) {
+  .nav-links { gap: 22px; }
+  .nav-links .navlink { font-size: 10px; letter-spacing: .12em; }
+
+  .hero { gap: 40px; padding: 60px 0 80px; }
+  .home-mid-grid { gap: 40px; }
+
+  .event-title { font-size: 19px; }
+  .event-subtitle { font-size: 11px; }
+  .event-date, .event-location { font-size: 12px; }
+  .event-scribble { max-width: 120px; }
+
+  .lookbook-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .masonry { grid-template-columns: repeat(3, 1fr); }
+  .item-layout { gap: 50px; }
+  .about-intro { gap: 50px; }
+}
+
+/* ==========================================================
+   2. TABLET VIEW (max-width: 900px)
+   ========================================================== */
+@media (max-width: 900px) {
+  /* ---- NAV: Show hamburger, prep dropdown ---- */
+  .menu-toggle { display: flex; }
+
+  .nav-links {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    height: auto;
+    max-height: calc(100vh - 80px);
+    background: var(--paper);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 8px 24px 30px;
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease, transform .25s ease;
+    z-index: 49;
+    overflow-y: auto;
+  }
+  .nav-links.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  .nav-links .navlink {
+    width: 100%;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--hairline);
+    font-size: 14px;
+    letter-spacing: .1em;
+  }
+  .nav-links .navlink:last-child { border-bottom: none; }
+  .nav-links .navlink.active {
+    color: var(--ink);
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  /* ---- DISABLE TRANSPARENT SCROLL EFFECT ON MOBILE ---- */
+  header.site-nav.scrolled {
+    background: var(--paper);
+    backdrop-filter: none;
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  /* ---- HOME HERO ---- */
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 40px 0 60px;
+    align-items: start;
+  }
+  .hero-frame { aspect-ratio: 4/5; max-width: 500px; }
+  .hero-side h1 { font-size: 32px; }
+  .hero-statement { font-size: 18px; margin-top: 30px; }
+
+  /* ---- HOME: Latest + Atelier stack ---- */
+  .home-mid-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 50px 0;
+  }
+  .atelier-section { padding-top: 0; }
+  .latest-grid { grid-template-columns: repeat(3, 1fr); }
+
+  /* ---- HOME: Journal stacks ---- */
+  .journal-band { grid-template-columns: 1fr; gap: 30px; padding: 50px 0; }
+
+  /* ---- HOME: Event Banner — CLEAN STACKED LAYOUT ---- */
+  .event-banner {
+    padding: 30px 0;
+    margin: 30px 0;
+  }
+  .event-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .event-left,
+  .event-scribble,
+  .event-center {
+    border-right: none;
+    border-bottom: 1px solid rgba(21, 19, 16, 0.15);
+    padding: 0 0 20px;
+    width: 100%;
+  }
+  .event-left {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .event-scribble {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 70px;
+    max-width: 130px;
+  }
+  .event-right {
+    width: 100%;
+    align-items: flex-start;
+    height: auto;
+    gap: 15px;
+    padding: 0;
+    border-bottom: none;
+  }
+  .event-handwritten-right { text-align: left; }
+  .event-handwritten { margin-left: 0; }
+
+  /* ---- JOURNAL PAGE ---- */
+  .journal-body {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-bottom: 80px;
+  }
+  .journal-side {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 30px;
+    padding-top: 0;
+  }
+  .journal-cats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 18px;
+    flex: 1;
+  }
+  .jcat { padding: 4px 0; font-size: 11px; }
+  .flower-sketch { width: 90px; height: 140px; margin-top: 0; }
+  .j-article { grid-template-columns: 1fr; gap: 20px; padding: 30px 0; }
+
+  /* ---- COLLECTION ---- */
+  .lookbook-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .masonry { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+
+  /* ---- ITEM DETAIL ---- */
+  .item-layout { grid-template-columns: 1fr; gap: 30px; }
+  .item-info h1 { font-size: 44px; }
+
+  /* ---- ABOUT ---- */
+  .about-intro { grid-template-columns: 1fr; gap: 30px; padding: 30px 0 50px; }
+  .about-facts { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .making-strip { grid-template-columns: repeat(3, 1fr); }
+
+  /* ---- CONTACT ---- */
+  .contact-main {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px 0 10px;
+    min-height: auto;
+  }
+  .contact-sketch-space { display: none; }
+}
+
+/* ==========================================================
+   3. MOBILE VIEW (max-width: 768px)
+   ========================================================== */
+@media (max-width: 768px) {
+  .wrap { padding: 0 16px; }
+
+  /* ---- NAV ---- */
+  .nav-row { height: 64px; padding: 0 16px; }
+  .logo img { height: 42px; }
+  .nav-links { top: 64px; max-height: calc(100vh - 64px); }
+
+  /* ---- HOME ---- */
+  .page-home { padding-top: 64px; }
+  .hero { padding: 20px 0 40px; gap: 24px; }
+  .hero-side h1 { font-size: 26px; line-height: 1.15; }
+  .hero-statement { font-size: 17px; margin-top: 24px; }
+
+  /* ---- Event Banner ---- */
+  .event-banner { padding: 25px 0; margin: 25px 0; }
+  .event-inner { gap: 20px; }
+  .event-title { font-size: 18px; }
+  .event-subtitle { font-size: 10px; letter-spacing: .06em; }
+  .event-date, .event-location { font-size: 12px; }
+  .event-handwritten-right { font-size: 18px; }
+  .event-star-sketch { width: 30px; height: 30px; }
+  .event-scribble { height: 55px; max-width: 100px; }
+
+  /* ---- Home grids ---- */
+  .home-mid-grid { padding: 40px 0; gap: 40px; }
+  .latest-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .latest-overlay {
+    position: static;
+    background: transparent;
+    border-top: none;
+    padding: 10px 0 0;
+    opacity: 1;
+    transform: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  .latest-overlay .lname { font-size: 13px; }
+  .latest-overlay .lmeta { font-size: 9px; }
+  .atelier-text h2 { font-size: 17px; }
+
+  /* ---- Journal Band ---- */
+  .journal-band { padding: 40px 0; gap: 25px; }
+  .journal-band h3 { font-size: 18px; }
+
+  /* ---- Newsletter ---- */
+  .newsletter-band { padding: 50px 0; }
+  .newsletter-band h2 { font-size: 34px; }
+  .newsletter-band p { font-size: 13px; margin-bottom: 24px; }
+  .newsletter-form { max-width: 100%; }
+
+  /* ---- Journal Page ---- */
+  .journal-page { padding-top: 64px; }
+  .journal-head { padding: 25px 0 30px; margin-bottom: 25px; }
+  .journal-head h1 { font-size: 18vw; line-height: .95; }
+  .journal-head .eyebrow { font-size: 10px; }
+  .journal-body { gap: 25px; padding-bottom: 60px; }
+  .journal-side { gap: 20px; }
+  .journal-cats { gap: 14px; }
+  .jcat { font-size: 10px; letter-spacing: .08em; }
+  .flower-sketch { width: 70px; height: 110px; }
+  .j-article { padding: 25px 0; gap: 15px; }
+  .j-article h3 { font-size: 20px; margin-bottom: 10px; }
+  .j-article p { font-size: 13px; }
+  .j-article .jmeta { font-size: 10px; }
+
+  /* ---- Collection ---- */
+  .archive-head { padding: 80px 0 25px; }
+  .archive-head h1 { font-size: 32px; }
+  .archive-sub { font-size: 12px; margin-bottom: 25px; }
+  .lookbook-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 40px; }
+  .masonry { grid-template-columns: repeat(2, 1fr); gap: 10px; padding-bottom: 50px; }
+  .collection-info { padding: 8px 10px; gap: 6px; }
+  .collection-info span { font-size: 11px; }
+  .collection-info small { font-size: 8px; }
+  .view-all-wrap { text-align: left; margin-top: 10px; margin-bottom: 50px; }
+  .back-link { font-size: 11px; margin-bottom: 20px; }
+
+  /* ---- Item Detail ---- */
+  .item-page { padding-top: 80px; }
+  .item-layout { gap: 25px; margin-bottom: 50px; }
+  .item-carousel { max-width: 100%; }
+  .item-info { padding-top: 0; }
+  .item-info h1 { font-size: 32px; }
+  .item-desc p { font-size: 14px; }
+  .d-row { font-size: 12px; padding: 10px 0; }
+
+  /* ---- About ---- */
+  .about-page { padding-top: 64px; }
+  .about-intro { padding: 20px 0 40px; gap: 25px; }
+  .about-title { font-size: 32px; margin-bottom: 20px; }
+  .about-text p { font-size: 14px; }
+  .about-facts { grid-template-columns: 1fr; gap: 20px; padding: 25px 0; margin-bottom: 40px; }
+  .fact-label { margin-bottom: 8px; }
+  .fact-val { font-size: 16px; }
+  .making-section { margin-bottom: 50px; }
+  .making-head { margin-bottom: 20px; }
+  .making-strip { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .making-step .m-label { font-size: 11px; }
+  .studio-image-wrap { height: 240px; margin-bottom: 50px; }
+  .studio-handwriting { width: 130px; right: 20px; bottom: 15px; }
+
+  /* ---- Contact ---- */
+  .contact-page { padding-top: 64px; }
+  .contact-head { padding: 25px 0 30px; }
+  .contact-head h1 { font-size: 18vw; line-height: .95; }
+  .contact-head p { font-size: 14px; }
+  .contact-main { gap: 25px; padding: 25px 0 10px; }
+  .contact-details { gap: 22px; }
+  .c-link { font-size: 13px; }
+  .contact-form { padding: 16px 0 40px; }
+  .contact-form input, .contact-form textarea { font-size: 13px; padding: 11px 10px; }
+  .contact-submit { width: 100px; font-size: 10px; }
+
+  /* ---- Footer ---- */
+  .foot-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  .foot-mid {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .foot-mid a { margin: 0 10px 0 0; }
+}
+
+/* ==========================================================
+   4. SMALL PHONE VIEW (max-width: 480px)
+   ========================================================== */
+@media (max-width: 480px) {
+  .hero-side h1 { font-size: 22px; }
+  .hero-statement { font-size: 15px; }
+  .latest-grid { grid-template-columns: 1fr; }
+
+  .event-title { font-size: 16px; }
+  .event-scribble { height: 45px; max-width: 80px; }
+  .event-handwritten-right { font-size: 16px; }
+  .event-handwritten { font-size: 16px; }
+
+  .newsletter-band h2 { font-size: 28px; }
+
+  .journal-head h1 { font-size: 22vw; }
+  .j-article h3 { font-size: 18px; }
+
+  .lookbook-grid, .masonry { grid-template-columns: 1fr; }
+
+  .about-title { font-size: 26px; }
+  .making-strip { grid-template-columns: 1fr; }
+
+  .contact-head h1 { font-size: 22vw; }
+
+  .item-info h1 { font-size: 28px; }
+}

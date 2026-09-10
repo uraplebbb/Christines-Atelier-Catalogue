@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Christine's Atelier</title>
+<link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
+<link rel="shortcut icon" href="images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="C.A" />
+<link rel="manifest" href="images/favicon/site.webmanifest" />
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-nav" id="siteNav">
+  <div class="nav-row">
+    <a class="logo" href="index.html">
+      <img src="images/logo.png" alt="Christine's Atelier">
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a class="navlink" href="collection.html">Collection</a>
+      <a class="navlink" href="journal.html">Journal</a>
+      <a class="navlink" href="about.html">About</a>
+      <a class="navlink active" href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="page active contact-page">
+  <div class="wrap">
+    <section class="contact-head">
+      <div class="eyebrow">Contact</div>
+      <h1>Get in touch.</h1>
+      <p>For commissions, private appointments, or questions about a piece, send a note and we will get back to you.</p>
+    </section>
+
+    <section class="contact-main" aria-label="Contact details">
+      <div class="contact-details">
+        <div class="c-block"><div class="c-heading">General enquiries</div><a class="c-link" id="generalEmail" href="#">hello@christinesatelier.com</a></div>
+        <div class="c-block"><div class="c-heading">Bespoke</div><a class="c-link" id="bespokeEmail" href="#">bespoke@christinesatelier.com</a></div>
+        <div class="c-block"><div class="c-heading">WhatsApp</div><a class="c-link" id="contactWhatsapp" href="#" target="_blank" rel="noopener">+234 800 000 0000</a></div>
+      </div>
+      <div class="contact-sketch-space" aria-hidden="true"></div>
+    </section>
+
+    <form class="contact-form" id="contactForm">
+      <p class="contact-form-note">For bespoke commissions, please include<br>your event date, location and preferred style.</p>
+      <label><span>Name</span><input id="contactName" type="text" placeholder="Name" required></label>
+      <label><span>Email</span><input id="contactSender" type="email" placeholder="Email" required></label>
+      <label><span>Message</span><textarea id="contactMessage" rows="4" placeholder="Message" required></textarea></label>
+      <button class="contact-submit" type="submit">Send enquiry <span>→</span></button>
+    </form>
+  </div>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>

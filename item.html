@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Atelier | Christine's Atelier</title>
+<link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
+<link rel="shortcut icon" href="images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="C.A" />
+<link rel="manifest" href="images/favicon/site.webmanifest" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-nav" id="siteNav">
+  <div class="nav-row">
+    <a class="logo" href="index.html">
+        <img src="images/logo.png" alt="Christine's Atelier">
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a class="navlink" href="collection.html">Collection</a>
+      <a class="navlink" href="journal.html">Journal</a>
+      <a class="navlink" href="about.html">About</a>
+      <a class="navlink" href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="page active item-page">
+  <div class="wrap">
+    <a href="collection.html" class="back-link">← Back to Archive</a>
+
+    <div class="item-layout">
+      <!-- Left: Large Image -->
+      <div class="item-media">
+        <div class="item-carousel" id="itemCarousel" aria-label="Collection images">
+          <div class="item-large-frame">
+            <img class="carousel-slide is-active" src="https://picsum.photos/seed/the-veil-main/900/1100" alt="The Veil">
+            <img class="carousel-slide" src="https://picsum.photos/seed/the-veil-d1/900/1100" alt="The Veil detail">
+            <img class="carousel-slide" src="https://picsum.photos/seed/the-veil-d2/900/1100" alt="The Veil detail">
+          </div>
+          <div class="carousel-dots" role="tablist" aria-label="Choose image">
+            <button class="carousel-dot" type="button" role="tab" aria-label="Image 1" aria-selected="true"></button>
+            <button class="carousel-dot" type="button" role="tab" aria-label="Image 2" aria-selected="false"></button>
+            <button class="carousel-dot" type="button" role="tab" aria-label="Image 3" aria-selected="false"></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Product Details -->
+      <div class="item-info">
+        <div class="item-no">No. 04</div>
+        <h1>The Veil</h1>
+        <div class="item-year">2026</div>
+
+        <div class="item-desc">
+          <p>Wool / silk / wire</p>
+          <p>Hand-formed in the atelier.</p>
+        </div>
+
+        <div class="details-list">
+          <div class="d-row"><span>Material</span><span>Wool, silk, wire</span></div>
+          <div class="d-row"><span>Technique</span><span>Hand-blocked, stitched</span></div>
+          <div class="d-row"><span>Dimensions</span><span>One size (custom fit available)</span></div>
+          <div class="d-row"><span>Availability</span><span>Enquire</span></div>
+        </div>
+
+        <a href="#" class="arrow-link" id="enquireBtn" target="_blank" rel="noopener">Enquire →</a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>

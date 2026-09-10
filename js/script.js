@@ -93,7 +93,7 @@ if (contactForm) {
 // ---- COLLECTION LOGIC ----
 // These are your placeholder images. You can replace the URLs later.
 const HATS = [
-    { no: "01", name: "The Abi KD", meta: "Wool / silk / wire", seed: "abi-kd", lbClass: "lb-1", images: ["images/The Abi KD/THE ABI-KD 155K .jpeg", "images/The Abi KD/The Abi KD 150k.jpg", "images/The Abi KD/The Abi KD 155k.jpg"] },
+    { no: "01", name: "The Abi KD", meta: "Wool / silk / wire", seed: "abi-kd", lbClass: "lb-1", images: ["images/The Abi KD/THE ABI-KD 155K .jpeg", "images/The Abi KD/The Abi Kd 150k.jpg", "images/The Abi KD/The Abi KD 155k.jpg"] },
     { no: "02", name: "The Angelica", meta: "Straw / wide brim", seed: "angelica", lbClass: "lb-2", images: ["images/The Angelica/The Angelica 200k.jpg", "images/The Angelica/The Angelica 200k(1).jpg", "images/The Angelica/The Angelica 200k(2).jpg"] },
     { no: "03", name: "The Star Burst", meta: "Silk / boater", seed: "star-burst", lbClass: "lb-3", images: ["images/The Star Burst/THE Star Burst 85K.jpeg", "images/The Star Burst/The Star Burst 85k.jpg", "images/The Star Burst/The Start burst 85k(1).jpg"] },
     { no: "04", name: "The Bello", meta: "Wool felt / cloche", seed: "bello", lbClass: "lb-4", images: ["images/The Bello/The Fidat 120k.jpg", "images/The Bello/The Fidat 120k(1).jpg", "images/The Bello/The Fidat 120k(2).jpg"] },

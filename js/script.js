@@ -22,7 +22,7 @@ if (nav) {
 const latestGrid = document.getElementById('latestGrid');
 const PRODUCTS = [
     { name:"The Ms Christie", meta:"Cotton / wrapped", image:"images/Ms. Christie/THE MS CHRISTIE 135K.jpeg" },
-    { name:"The Angelica", meta:"Straw / wide brim", image:"images/The Angelica/The Angelica 200k.jpg" },
+    { name:"The Angelica", meta:"Straw / wide brim", image:"images/The Angelica/The Angelica 200k(2).jpg" },
     { name:"The Star Burst", meta:"Silk / boater", image:"images/The Star Burst/THE Star Burst 85K.jpeg" },
 ];
 
@@ -89,83 +89,117 @@ if (contactForm) {
     });
 }
 
-
 // ---- COLLECTION LOGIC ----
-// These are your placeholder images. You can replace the URLs later.
+// These are the placeholder images. Will replace the URLs later.
 const HATS = [
-    { no: "01", name: "The Abi KD", meta: "Wool / silk / wire", seed: "abi-kd", lbClass: "lb-1", images: ["images/The Abi KD/THE ABI-KD 155K .jpeg", "images/The Abi KD/The Abi Kd 150k.jpg", "images/The Abi KD/The Abi KD 155k.jpg"] },
-    { no: "02", name: "The Angelica", meta: "Straw / wide brim", seed: "angelica", lbClass: "lb-2", images: ["images/The Angelica/The Angelica 200k.jpg", "images/The Angelica/The Angelica 200k(1).jpg", "images/The Angelica/The Angelica 200k(2).jpg"] },
-    { no: "03", name: "The Star Burst", meta: "Silk / boater", seed: "star-burst", lbClass: "lb-3", images: ["images/The Star Burst/THE Star Burst 85K.jpeg", "images/The Star Burst/The Star Burst 85k.jpg", "images/The Star Burst/The Start burst 85k(1).jpg"] },
-    { no: "04", name: "The Bello", meta: "Wool felt / cloche", seed: "bello", lbClass: "lb-4", images: ["images/The Bello/The Fidat 120k.jpg", "images/The Bello/The Fidat 120k(1).jpg", "images/The Bello/The Fidat 120k(2).jpg"] },
-    { no: "05", name: "The Cordelia", meta: "Sinamay / sculpted", seed: "cordelia", lbClass: "lb-5", images: ["images/The Cordelia/THE Cordelia 155K.jpeg", "images/The Cordelia/The Cordelia 155k.jpg", "images/The Cordelia/The Cordelia 155k(1).jpg"] },
-    { no: "06", name: "The Ms Christie", meta: "Cotton / wrapped", seed: "ms-christie", lbClass: "lb-6", images: ["images/Ms. Christie/THE MS CHRISTIE 135K.jpeg", "images/Ms. Christie/Ms. Christie 135k.jpg", "images/Ms. Christie/Ms. Christie 135k(1).jpg"] },
-    { no: "07", name: "The Azure Pine", meta: "Felt / folded brim", seed: "azure-pine", lbClass: "lb-7", images: ["images/The Azure Pine/THE AZURE PINE 155K.jpeg", "images/The Azure Pine/The Azure pine 135k.jpg", "images/The Azure Pine/The Azure pine 135k_.jpg"] },
-    { no: "08", name: "The Goodness", meta: "Straw / hand-blocked", seed: "goodness", lbClass: "lb-8", images: ["images/The Goodness/The Goodness 200k.jpg", "images/The Goodness/The Goodness 200k(1).jpg", "images/The Goodness/The Goodness 200k(2).jpg"] },
-    { no: "09", name: "The Iffy", meta: "Silk / veil", seed: "iffy", lbClass: "lb-9", images: ["images/The Iffy/THE IFFY 90K.jpeg", "images/The Iffy/The iffy(1).jpg", "images/The Iffy/The iffy(2).jpg"] },
-    { no: "10", name: "The Bode", meta: "Wool / soft crown", seed: "bode", lbClass: "lb-10", images: ["images/The Bode/The Bode 50k.jpg", "images/The Bode/The Bode 50k(1).jpg", "images/The Bode/The Bode 50k_.jpg"] },
-    { no: "11", name: "The Ariella", meta: "Jute / wide brim", seed: "ariella", lbClass: "lb-11", images: ["images/The Ariella/The Ariella 85k.jpg", "images/The Ariella/The Ariella 85k(1).jpg", "images/The Ariella/The Ariella 85k(2).jpg"] },
-    { no: "12", name: "The Folasade", meta: "Felt / ribbon", seed: "folasade", lbClass: "lb-12", images: ["images/The Folasade/The Folashade 135k.jpg", "images/The Folasade/The Folashade 135k(1).jpg", "images/The Folasade/The Folashade (120k).jpg"] },
+    { no: "01", name: "The Abi KD",      meta: "Wool / silk / wire",         category: "structured",   images: ["images/The Abi KD/THE ABI-KD 155K .jpeg", "images/The Abi KD/The Abi Kd 150k.jpg", "images/The Abi KD/The ABI KD 155k.jpg"] },
+    { no: "02", name: "The Angelica",    meta: "Straw / wide brim",          category: "wide-brim",    images: ["images/The Angelica/The Angelica 200k(2).jpg", "images/The Angelica/The Angelica 200k(1).jpg", "images/The Angelica/The Angelica 200k(3).jpg"] },
+    { no: "03", name: "The Star Burst",  meta: "Silk / boater",              category: "avant-garde",  images: ["images/The Star Burst/THE Star Burst 85K.jpeg", "images/The Star Burst/The Star Burst 85k.jpg", "images/The Star Burst/The Start burst 85k(1).jpg"] },
+    { no: "04", name: "The Bello",       meta: "Wool felt / cloche",         category: "structured",   images: ["images/The Bello/The Fidat 120k.jpg", "images/The Bello/The Fidat 120k(1).jpg", "images/The Bello/The Fidat 120k(2).jpg"] },
+    { no: "05", name: "The Cordelia",    meta: "Sinamay / sculpted",         category: "fascinator",   images: ["images/The Cordelia/THE Cordelia 155K.jpeg", "images/The Cordelia/The Cordelia 155k.jpg", "images/The Cordelia/The Cordelia 155k(1).jpg"] },
+    { no: "06", name: "The Ms Christie", meta: "Cotton / wrapped",           category: "structured",   images: ["images/Ms. Christie/THE MS CHRISTIE 135K.jpeg", "images/Ms. Christie/Ms. Christie 135k.jpg", "images/Ms. Christie/Ms. Christie 135k(1).jpg"] },
+    { no: "07", name: "The Azure Pine",  meta: "Felt / folded brim",         category: "avant-garde",  images: ["images/The Azure Pine/THE AZURE PINE 155K.jpeg", "images/The Azure Pine/The Azure pine 135k.jpg", "images/The Azure Pine/The Azure pine 135k_.jpg"] },
+    { no: "08", name: "The Goodness",    meta: "Straw / hand-blocked",       category: "wide-brim",    images: ["images/The Goodness/The Goodness 200k.jpg", "images/The Goodness/The Goodness 200k(1).jpg", "images/The Goodness/The Goodness 200k(2).jpg"] },
+    { no: "09", name: "The Iffy",        meta: "Silk / veil",                category: "fascinator",   images: ["images/The Iffy/THE IFFY 90K.jpeg", "images/The Iffy/The iffy(1).jpg", "images/The Iffy/The iffy(2).jpg"] },
+    { no: "10", name: "The Bode",        meta: "Wool / soft crown",          category: "unisex",       images: ["images/The Bode/The Bode 50k.jpg", "images/The Bode/The Bode 50k(1).jpg", "images/The Bode/The Bode 50k_.jpg"] },
+    { no: "11", name: "The Ariella",     meta: "Jute / wide brim",           category: "wide-brim",    images: ["images/The Ariella/The Ariella 85k.jpg", "images/The Ariella/The Ariella 85k(1).jpg", "images/The Ariella/The Ariella 85k(2).jpg"] },
+    { no: "12", name: "The Folasade",    meta: "Felt / ribbon",              category: "structured",   images: ["images/The Folasade/The Folashade 135k.jpg", "images/The Folasade/The Folashade 135k(1).jpg", "images/The Folasade/The Folashade (120k).jpg"] },
 ];
 
+// ---- COLLECTION: Filter + Load More ----
 const lookbookGrid = document.getElementById('lookbookGrid');
-const masonryGrid = document.getElementById('masonryGrid');
-const lookbookView = document.getElementById('lookbookView');
-const masonryView = document.getElementById('masonryView');
-const viewAllBtn = document.getElementById('viewAllBtn');
-const backToLookbookBtn = document.getElementById('backToLookbookBtn');
+const loadMoreWrap = document.getElementById('loadMoreWrap');
+const loadMoreBtn = document.getElementById('loadMoreBtn');
+
+let activeCategory = 'all';
+let visibleCount = 8; // how many items to show initially
+const ITEMS_PER_LOAD = 8; // how many to add per "Load more" click
+
+function getFilteredHats() {
+  return activeCategory === 'all'
+    ? HATS
+    : HATS.filter(hat => hat.category === activeCategory);
+}
+
+function renderLookbook(reset = false) {
+  if (!lookbookGrid) return;
+
+  if (reset) {
+    lookbookGrid.innerHTML = '';
+  }
+
+  const filtered = getFilteredHats();
+  const toShow = filtered.slice(0, visibleCount);
+
+  // Only re-render if we're resetting, or append the new items
+  if (reset) {
+    if (toShow.length === 0) {
+      lookbookGrid.innerHTML = `
+        <p style="grid-column: 1/-1; padding: 60px 0; color: var(--ink-45); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; text-align: center;">
+          No pieces in this category yet.
+        </p>`;
+      if (loadMoreWrap) loadMoreWrap.style.display = 'none';
+      return;
+    }
+
+    toShow.forEach(hat => createCard(hat, lookbookGrid));
+  } else {
+    // Append only the newly revealed items
+    const previouslyShown = visibleCount - ITEMS_PER_LOAD;
+    const newItems = filtered.slice(previouslyShown, visibleCount);
+    newItems.forEach(hat => createCard(hat, lookbookGrid));
+  }
+
+  // Show or hide the "Load more" button
+  if (loadMoreWrap) {
+    if (visibleCount >= filtered.length) {
+      loadMoreWrap.style.display = 'none';
+    } else {
+      loadMoreWrap.style.display = 'flex';
+    }
+  }
+}
+
+function createCard(hat, container) {
+  const div = document.createElement('div');
+  div.className = `lookbook-item ${hat.lbClass || ''}`;
+  div.innerHTML = `
+    <img src="${hat.images[0]}" alt="${hat.name}" loading="lazy">
+    <div class="collection-info">
+      <span>${hat.name}</span>
+      <small>${hat.meta}</small>
+    </div>
+  `;
+  div.addEventListener('click', () => goToItem(hat.no));
+  container.appendChild(div);
+}
+
+// Filter button listeners
+const filterPills = document.querySelectorAll('.filter-pill');
+filterPills.forEach(pill => {
+  pill.addEventListener('click', () => {
+    filterPills.forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    activeCategory = pill.dataset.filter;
+    visibleCount = ITEMS_PER_LOAD; // reset pagination
+    renderLookbook(true); // reset and re-render
+  });
+});
+
+// Load more button
+if (loadMoreBtn) {
+  loadMoreBtn.addEventListener('click', () => {
+    visibleCount += ITEMS_PER_LOAD;
+    renderLookbook(false); // append new items
+  });
+}
+
+// Initial render
+renderLookbook(true);
 
 // Function to create links to item.html
 function goToItem(no) {
     window.location.href = `item.html?no=${no}`;
-}
-
-// Populate Lookbook
-if (lookbookGrid) {
-    HATS.forEach(hat => {
-        const div = document.createElement('div');
-        div.className = `lookbook-item ${hat.lbClass}`;
-        div.innerHTML = `
-            <img src="${hat.images[0]}" alt="${hat.name}">
-            <div class="collection-info"><span>${hat.name}</span><small>${hat.meta}</small></div>
-        `;
-        div.addEventListener('click', () => goToItem(hat.no));
-        lookbookGrid.appendChild(div);
-    });
-}
-
-// Populate Masonry (View All)
-if (masonryGrid) {
-    // Reusing the same hats for the demo, but you can easily add 24 here
-    HATS.forEach(hat => {
-        const div = document.createElement('div');
-        div.className = 'm-item';
-        div.innerHTML = `
-            <span class="m-num">No. ${hat.no}</span>
-            <img src="${hat.images[1]}" alt="${hat.name}">
-            <div class="collection-info"><span>${hat.name}</span><small>${hat.meta}</small></div>
-        `;
-        div.addEventListener('click', () => goToItem(hat.no));
-        masonryGrid.appendChild(div);
-    });
-}
-
-// Toggle to Masonry View
-if (viewAllBtn) {
-    viewAllBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        lookbookView.style.display = 'none';
-        masonryView.style.display = 'block';
-        window.scrollTo(0, 0);
-    });
-}
-
-// Toggle back to Lookbook View
-if (backToLookbookBtn) {
-    backToLookbookBtn.addEventListener('click', () => {
-        masonryView.style.display = 'none';
-        lookbookView.style.display = 'block';
-        window.scrollTo(0, 0);
-    });
 }
 
 // ---- ITEM DETAIL LOGIC (Only runs on item.html) ----

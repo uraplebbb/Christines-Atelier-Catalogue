@@ -37,25 +37,38 @@
 
 <main class="page active">
 
-  <!-- 1. THE LOOKBOOK / FEATURED VIEW -->
-  <div id="lookbookView" class="wrap">
+  <!--THE LOOKBOOK VIEW -->
+  <div class="wrap">
     <div class="archive-head">
       <h1>The Archive</h1>
       <p class="archive-sub">Collection 01 — Autumn / Winter 2026</p>
+
+      <!-- CATEGORY FILTER BAR -->
+      <div class="collection-filters" role="tablist" aria-label="Hat categories">
+        <button class="filter-pill active" data-filter="all">All</button>
+        <button class="filter-pill" data-filter="bridal">Bridal</button>
+        <button class="filter-pill" data-filter="fascinator">Fascinators</button>
+        <button class="filter-pill" data-filter="avant-garde">Avant-Garde</button>
+        <button class="filter-pill" data-filter="wide-brim">Wide Brim</button>
+        <button class="filter-pill" data-filter="structured">Structured</button>
+        <button class="filter-pill" data-filter="unisex">Unisex</button>
+      </div>
     </div>
 
     <!-- The Grid (Styled like the inspo) -->
-    <div class="lookbook-grid" id="lookbookGrid">
+    <div class="lookbook-grid" id="lookbookGrid" data-view="grid">
       <!-- Javascript will populate this -->
     </div>
 
-    <div class="view-all-wrap">
-      <a href="#" class="arrow-link" id="viewAllBtn">View all →</a>
+    <!-- LOAD MORE BUTTON -->
+    <div class="load-more-wrap" id="loadMoreWrap">
+      <button class="load-more-btn" id="loadMoreBtn">Load more ￬</button>
     </div>
+
   </div>
 
   <!-- 2. THE MASONRY GALLERY (View All) -->
-  <div id="masonryView" class="wrap" style="display:none;">
+  <div id="masonryView" class="wrap" style="display:none;" data-view="masonry">
     <div class="archive-head">
       <h1>Full Archive 2026</h1>
       <p class="archive-sub">Collection 01</p>

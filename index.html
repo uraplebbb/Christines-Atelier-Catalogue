@@ -12,167 +12,286 @@
 <link rel="manifest" href="images/favicon/site.webmanifest" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/responsive.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20261008">
+<link rel="stylesheet" href="css/responsive.css?v=20261008">
 </head>
-<body>
+<body class="home">
 
-<header class="site-nav" id="siteNav">
+<!-- ============================================================
+     MAGAZINE COVER
+     ============================================================ -->
+<header class="site-nav home-nav" id="siteNav">
   <div class="nav-row">
-    <a class="logo" href="index.html">
-        <img src="images/logo.png" alt="Christine's Atelier">
-    </a>
-    <nav class="nav-links" id="navLinks">
+    <a class="logo" href="index.html" aria-label="Christine's Atelier home"><img src="images/logo.png" alt="Christine's Atelier"></a>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
       <a class="navlink" href="collection.html">Collection</a>
       <a class="navlink" href="journal.html">Journal</a>
       <a class="navlink" href="about.html">About</a>
       <a class="navlink" href="contact.html">Contact</a>
     </nav>
-    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-    </button>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
   </div>
 </header>
 
-<!-- ============ HOME ============ -->
-<section class="page active page-home" id="page-home">
-  <div class="wrap">
-
-    <!-- Hero Section -->
-    <div class="hero">
-      <div class="hero-frame"><img src="images/Ms.%20Christie/THE%20MS%20CHRISTIE%20135K.jpeg" alt="The Ms Christie"></div>
+<main class="page active page-home" id="page-home">
+  <section class="hero" aria-labelledby="homeTitle">
+      <div class="hero-frame"><img src="images/hero-img.png" alt="Christine's Atelier collection editorial"></div>
       <div class="hero-side">
-        <div class="eyebrow">Collection 01 — 2026</div>
-        <h1>Collection 01<br>Autumn / Winter 2026</h1>
-        <a class="arrow-link" href="collection.html">View collection →</a>
-        <p class="hero-statement">Objects for the head, made by hand.</p>
+        <div class="eyebrow">Christine's Atelier · Digital Catalogue</div>
+        <h1 id="homeTitle">Headwear, in all<br>its forms.</h1>
+        <p class="hero-intro">A catalogue of hats, fascinators and sculptural headpieces, handcrafted in Lagos.</p>
+        <a class="arrow-link" href="collection.html">Discover Collection 01 <span aria-hidden="true">→</span></a>
       </div>
-    </div>
-
-     <!-- 2. EVENT BANNER (Full-width, sits between hero and lower content) -->
-  <div class="event-banner">
-    <div class="wrap">
+      <a class="hero-scroll" href="#latestTitle" aria-label="Scroll to the latest pieces"><span>Scroll</span><i aria-hidden="true"></i></a>
+  </section>
+  <div class="wrap">
+    <section class="event-banner" aria-label="Current collection">
       <div class="event-inner">
-        <!-- Left: Current Tag -->
-        <div class="event-left">
-          <div class="event-tag">CURRENT / 01</div>
-        <svg class="event-star-sketch" viewBox="0 0 50 50" fill="none">
-             <path d="M25 5 L25 45 M5 25 L45 25 M12 12 L38 38 M38 12 L12 38" 
-                 stroke="#151310" stroke-width="0.8" stroke-linecap="round"/>
-            <path d="M25 15 L25 35 M15 25 L35 25" 
-                stroke="#151310" stroke-width="0.5" stroke-linecap="round"/>
-        </svg>
-          <div class="event-handwritten">Lagos</div>
-        </div>
-        <!-- Middle Left: Event Hat Sketch -->
-        <div class="event-scribble">
-          <svg class="event-hat-sketch" viewBox="0 0 200 120" fill="none">
-                <!-- Crown of the hat -->
-                <path d="M70 60 C 60 20, 80 10, 100 10 C 120 10, 140 20, 130 60" 
-                        stroke="#151310" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-                <!-- Brim of the hat -->
-                <path d="M30 70 C 60 100, 140 100, 170 70 C 140 85, 60 85, 30 70 Z" 
-                        stroke="#151310" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-                <!-- Detail line inside the brim -->
-                <path d="M50 72 C 80 88, 120 88, 150 72" 
-                        stroke="#151310" stroke-width="0.6" fill="none" stroke-linecap="round"/>
-                <!-- A subtle curve line to mimic fabric -->
-                <path d="M85 30 Q 100 50, 115 30" 
-                        stroke="#151310" stroke-width="0.5" fill="none"/>
-            </svg>
-        </div>
-        <!-- Middle Right: Event Details -->
+        <div class="event-left"><div class="event-tag">CURRENT / 01</div><div class="event-handwritten">Lagos</div></div>
         <div class="event-center">
-          <h2 class="event-title">LAGOS FASHION WEEK</h2>
-          <div class="event-subtitle">COLLECTION 01 — AUTUMN / WINTER 2026</div>
-          <div class="event-date">14 — 18 OCTOBER 2026</div>
-          <div class="event-location">LAGOS, NIGERIA</div>
+          <h2 class="event-title">Lagos Fashion Week</h2>
+          <div class="event-subtitle">Collection 01 — Autumn / Winter 2026</div>
+          <div class="event-date">14 — 18 October 2026</div>
+          <div class="event-location">Lagos, Nigeria</div>
         </div>
-        <!-- Right: Handwriting + View Button -->
-        <div class="event-right">
-          <div class="event-handwritten-right">the first<br>showing.</div>
-          <a href="#" class="event-link">VIEW EVENT →</a>
-        </div>
+        <div class="event-right"><span class="event-handwritten-right">the first showing.</span></div>
       </div>
-    </div>
-  </div>
-
-    <!-- Latest & Atelier (Side by Side) -->
+    </section>
     <div class="home-mid-grid">
-      
-      <!-- Latest Products -->
-      <div class="latest-section">
-        <div class="section-title"><div class="eyebrow">Latest</div></div>
-        <div class="latest-grid" id="latestGrid"></div>
-      </div>
-
-      <!-- The Atelier -->
-      <div class="atelier-section">
-        <div class="section-title"><div class="eyebrow">The Atelier</div></div>
-        <div class="atelier-text">
-          <h2>A small, independent millinery house creating sculptural headwear by hand.</h2>
-          <p>From a studio in Lekki, Lagos. Bespoke, ready-to-wear, and made to last beyond a season.</p>
-          <a class="arrow-link" href="about.html">Learn more →</a>
+      <section class="latest-section" aria-labelledby="latestTitle">
+        <div class="latest-heading">
+          <div><div class="eyebrow">Collection 01 / Lagos</div><h2 id="latestTitle">The latest pieces</h2></div>
+          <a class="arrow-link" href="collection.html">Explore the collection <span aria-hidden="true">→</span></a>
         </div>
-      </div>
-
+        <div class="latest-grid" id="latestGrid"></div>
+      </section>
     </div>
-
-    <!-- Journal Band -->
-    <div class="journal-band">
-      <div class="journal-text">
-        <div class="jtag">Journal</div>
-        <p class="journal-cat">Process / Material / Culture</p>
-        
-        <h3>The Making of a Hat</h3>
-        <p>From sketch to final form — a look inside the atelier.</p>
-        <a href="journal.html">Explore →</a>
-      </div>
-      <div class="journal-text">
-        <div class="jtag">Material</div>
-        <p class="journal-cat">Raw Material</p>
-        
-        <h3>On Straw, Felt and Silk</h3>
-        <p>The materials that shape our collections.</p>
-        <a href="journal.html">Explore →</a>
-      </div>
-    </div>
-
+    <section class="journal-band" aria-label="From the journal">
+      <article class="journal-text">
+        <a class="home-journal-image" href="journal.html"><img src="https://picsum.photos/seed/hat-journal-1/600/450" alt="The Making of a Hat" loading="lazy"></a>
+        <div class="jtag">Journal / Process</div><h3>The Making of a Hat</h3><p>From sketch to final form — a look inside the atelier.</p><a href="journal.html">Explore the journal <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="journal-text">
+        <a class="home-journal-image" href="journal.html"><img src="https://picsum.photos/seed/hat-journal-2/600/450" alt="On Felt, Straw and Silk" loading="lazy"></a>
+        <div class="jtag">Journal / Material</div><h3>On Straw, Felt and Silk</h3><p>The materials that shape our collections and move with the wearer.</p><a href="journal.html">Explore the journal <span aria-hidden="true">→</span></a>
+      </article>
+    </section>
   </div>
-
-  <!-- Newsletter Band (Restored) -->
-  <div class="newsletter-band">
+  <section class="newsletter-band" aria-labelledby="newsletterTitle">
     <div class="wrap">
-      <h2>Letters from<br>the atelier.</h2>
+      <h2 id="newsletterTitle">Letters from<br>the atelier.</h2>
       <p>Occasional notes on new collections, materials, exhibitions and things we're making.</p>
-      <form class="newsletter-form" id="newsletterForm">
-        <input type="email" placeholder="Email address" required>
+      <form class="newsletter-form" id="restoredNewsletterForm">
+        <label class="visually-hidden" for="newsletterEmail">Email address</label>
+        <input id="newsletterEmail" name="email" type="email" placeholder="Email address" autocomplete="email" required>
         <button type="submit">Subscribe →</button>
       </form>
+      <p class="newsletter-status" id="newsletterStatus" role="status" aria-live="polite"></p>
     </div>
-  </div>
-
-</section>
+  </section>
+</main>
 
 <footer class="site-footer">
   <div class="wrap">
     <div class="foot-row">
-      <div class="foot-logo">Christine's Atelier</div>
-      <div class="foot-sub">Collection / Journal / About / Contact</div>
+      <a class="foot-logo" href="index.html">Christine's Atelier</a>
+      <nav class="foot-links" aria-label="Footer navigation"><a href="collection.html">Collection</a><a href="journal.html">Journal</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
     </div>
-    <div class="foot-mid">
-      <span>© 2026 Christine's Atelier</span>
-      <div>
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <span>Lagos / NG</span>
-    </div>
+    <div class="foot-mid"><span>© 2026 Christine's Atelier</span><span>Lagos, Nigeria</span></div>
   </div>
 </footer>
 
-<script src="js/script.js"></script>
+<section class="mag-cover">
+
+  <!-- Full-bleed image -->
+  <div class="mag-bg">
+    <img src="images/hero-img.png" alt="Christine's Atelier">
+  </div>
+
+  <!-- Overlay -->
+  <div class="mag-overlay"></div>
+
+  <!-- Content over image -->
+  <div class="mag-content">
+
+    <!-- Top-left: the logo (inverted white) -->
+    <a href="index.html" class="mag-top-left mag-logo">
+      <img src="images/logo.png" alt="Christine's Atelier">
+    </a>
+
+    <!-- Top-right: issue -->
+    <div class="mag-top-right">
+      <span class="mag-label">Issue 2026</span>
+    </div>
+
+    <!-- Center -->
+    <div class="mag-center">
+      <h1 class="mag-title">atelier</h1>
+
+      <div class="mag-badge-row">
+        <span class="mag-badge-year">Millinery Catalogue</span>
+      </div>
+
+      <div class="mag-tags">
+        <span>Headwear</span>
+        <span class="mag-tags-dot">·</span>
+        <span>Handmade</span>
+        <span class="mag-tags-dot">·</span>
+        <span>Lagos</span>
+      </div>
+    </div>
+
+    <!-- Bottom-left -->
+    <div class="mag-bottom-left">
+      <span class="mag-label">Christine's Atelier</span>
+      <span class="mag-label-sub">Handcrafted since 2006</span>
+    </div>
+
+    <!-- Bottom-right -->
+    <div class="mag-bottom-right">
+      <span class="mag-label">Lagos, NG</span>
+    </div>
+
+  </div>
+
+  <!-- ============================================================
+       VERTICAL POLYGON SLICED RAIL
+       ============================================================ -->
+  <aside class="rail" aria-label="Primary navigation">
+
+  <a href="collection.html" class="rail-item">
+    <span class="rail-num">01</span>
+    <span class="rail-text">archive</span>
+  </a>
+
+  <a href="about.html" class="rail-item">
+    <span class="rail-num">02</span>
+    <span class="rail-text">about</span>
+  </a>
+
+  <a href="journal.html" class="rail-item">
+    <span class="rail-num">03</span>
+    <span class="rail-text">journal</span>
+  </a>
+
+  <a href="contact.html" class="rail-item">
+    <span class="rail-num">04</span>
+    <span class="rail-text">contact</span>
+  </a>
+
+</aside>
+
+</section>
+
+<!-- ============================================================
+     REST OF THE HOMEPAGE — flows below the cover
+     ============================================================ -->
+<main class="home-main">
+
+  <!-- THE ATELIER -->
+  <section class="atelier-section">
+    <div class="atelier-inner">
+
+      <div class="atelier-text">
+        <div class="eyebrow">The Atelier</div>
+        <h2 class="atelier-heading">Form, material<br>and the individual.</h2>
+        <p class="atelier-body">
+          Millinery is more than an accessory. It is structure, proportion,
+          movement and expression. Each piece is built by hand in our Lagos
+          studio — shaped slowly, blocked precisely, finished to sit as if it
+          always belonged.
+        </p>
+        <a href="about.html" class="arrow-link">Explore our process →</a>
+      </div>
+
+      <div class="atelier-image">
+        <img src="images/Ms.%20Christie/THE%20MS%20CHRISTIE%20135K.jpeg" alt="Hand-finished hat in the atelier">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LATEST COLLECTION -->
+  <section class="collection-section">
+    <div class="collection-inner">
+
+      <div class="collection-text">
+        <div class="eyebrow">Latest Collection</div>
+        <h2 class="collection-heading">Our Latest<br>Collection</h2>
+        <p class="collection-body">
+          A study in structure, movement and material. Eleven pieces,
+          each shaped by hand and finished in the studio.
+        </p>
+        <a href="collection.html" class="arrow-link">View collection →</a>
+      </div>
+
+      <div class="collection-carousel">
+        <div class="carousel-track" id="carouselTrack"></div>
+        <div class="carousel-controls">
+          <div class="carousel-counter">
+            <span id="carouselIndex">01</span>
+            <span class="carousel-counter-sep">/</span>
+            <span id="carouselTotal">04</span>
+          </div>
+          <div class="carousel-arrows">
+            <button class="carousel-arrow" id="carouselPrev" aria-label="Previous">←</button>
+            <button class="carousel-arrow" id="carouselNext" aria-label="Next">→</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LETTERS FROM THE ATELIER -->
+  <section class="letters-section">
+    <div class="letters-inner">
+
+      <div class="letters-image">
+        <img src="images/Ms.%20Christie/IMG_3643.JPG" alt="Hands at work in the atelier">
+      </div>
+
+      <div class="letters-content">
+        <div class="eyebrow">Letters from the Atelier</div>
+        <h2 class="letters-heading">Thoughts on design, craft, culture and the modern muse.</h2>
+
+        <form class="letters-form" id="newsletterForm">
+          <label class="letters-label" for="lettersEmail">Your email</label>
+          <div class="letters-input-row">
+            <input id="lettersEmail" type="email" placeholder="" required>
+            <button type="submit">Subscribe →</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="mag-footer">
+    <div class="mag-footer-inner">
+      <div class="mag-footer-row">
+        <div class="mag-footer-logo">Christine's Atelier</div>
+        <nav class="mag-footer-nav">
+          <a href="collection.html">archive</a>
+          <a href="about.html">atelier</a>
+          <a href="journal.html">newsletter</a>
+          <a href="contact.html">contact</a>
+        </nav>
+        <div class="mag-footer-socials">
+          <a href="#" target="_blank" rel="noopener">Instagram ↗</a>
+          <a href="#" target="_blank" rel="noopener">Pinterest ↗</a>
+        </div>
+      </div>
+      <div class="mag-footer-row mag-footer-row-bottom">
+        <span>Lagos, Nigeria</span>
+        <span>© 2026 — All rights reserved</span>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<script src="js/script.js?v=20261008"></script>
 </body>
 </html>

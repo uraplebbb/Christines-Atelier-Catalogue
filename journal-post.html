@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journal — Christine's Atelier</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20261009">
+<link rel="stylesheet" href="css/responsive.css?v=20261009">
+</head>
+<body>
+<header class="site-nav" id="siteNav">
+  <div class="nav-row">
+    <a class="logo" href="index.html" aria-label="Christine's Atelier home"><img src="images/logo.png" alt="Christine's Atelier"></a>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a class="navlink" href="collection.html">Collection</a>
+      <a class="navlink active" href="journal.html">Journal</a>
+      <a class="navlink" href="about.html">About</a>
+      <a class="navlink" href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </div>
+</header>
+
+<main class="journal-post-page" id="journalPost">
+  <div class="journal-post-top">
+    <a class="journal-back" href="journal.html">← Back to Journal</a>
+    <time id="journalPostDate"></time>
+  </div>
+  <div class="journal-post-layout">
+    <figure class="journal-post-image"><img id="journalPostImage" src="" alt=""></figure>
+    <article class="journal-post-content">
+      <div class="journal-post-meta"><span id="journalPostAuthor"></span><span id="journalPostReadTime"></span></div>
+      <span class="journal-post-category" id="journalPostCategory"></span>
+      <h1 id="journalPostTitle"></h1>
+      <p class="journal-post-intro" id="journalPostExcerpt"></p>
+      <div class="journal-post-body" id="journalPostBody"></div>
+      <div class="journal-post-actions">
+        <button type="button" id="journalPrint">Download PDF <span aria-hidden="true">↓</span></button>
+        <button type="button" id="journalShare" aria-expanded="false" aria-controls="journalShareMenu">Share <span aria-hidden="true">↗</span></button>
+      </div>
+      <div class="journal-share-menu" id="journalShareMenu" hidden>
+        <a id="journalShareEmail" href="#">Email</a>
+        <a id="journalShareWhatsApp" href="#" target="_blank" rel="noopener">WhatsApp</a>
+        <button type="button" id="journalShareCopy">Copy link</button>
+      </div>
+    </article>
+  </div>
+</main>
+
+<script src="js/script.js?v=20261009"></script>
+</body>
+</html>
